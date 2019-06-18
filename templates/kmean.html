@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="file:///E|/desktop/OneDrive - AIOS/WEB数据管理/Program/WANG_LEANEVENTO/css/sayitright.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ShowPicture</title>
+<style>
+	
+#all{
+		margin:0px auto;
+		width:500px;
+		height: 200px;
+
+	}
+	a{
+		margin: 0px auto;
+	}
+</style>
+</head>
+
+<body>
+<img src="data:image/png;base64,{{ base64}}" />
+<br />
+<b>The most earthquake happen place</b>
+<br />
+<table>
+<tr>
+	<td>Latitude</td>
+	<td>Longtitude</td>
+	<td>Number</td>
+
+</tr>
+	{% for row in data %}
+	{% if row[4] >=10 %}
+	<tr>
+		<td>{{ row [0]}} {{ row [1]}}</td>
+		<td>{{ row [2]}} {{ row [3]}}</td>
+		<td>{{ row [4]}}</td>
+
+	</tr>
+
+{% endif %}
+{% endfor %}
+</table>
+
+
+
+
+<div id="footer" style="text-align:center;"><b>copyright@2019 All rights reserved|This web is made by Anakin</b></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="file:///E|/desktop/OneDrive - AIOS/WEB数据管理/Program/WANG_LEANEVENTO/css/sayitright.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ShowInfo</title>
+<style>
+	
+#all{
+		margin:0px auto;
+		width:500px;
+		height: 200px;
+
+	}
+	a{
+		margin: 0px auto;
+	}
+</style>
+</head>
+
+<body>
+	
+
+<div class="body" id='all'>
+	<b>1710 Pengyun,Wang</b>
+<table>
+
+		{% for i in data %}
+<tr>
+	<td>
+		{{i[0]}}
+	</td>
+	<!-- <td>
+		{{i[1]}}
+	</td> -->
+		<td>
+		{{i[2]}}
+	</td>
+	<!-- 	<td>
+		{{i[3]}}
+	</td> -->
+		<td>
+			{% if i[4]  %}
+			{% if i[4] =='Picture'%}
+			{{i[4]}}
+			{% else  %}
+		<img width="50" height='50' src="{{ url_for('static', filename=i[4]) }}" alt="" />
+		{% endif %}
+		{% else  %}
+		<a>Null</a>
+		{% endif %}
+	</td>
+</tr>
+	{% endfor %}
+
+</table>
+	
+
+
+
+
+<hr />
+<div id="footer" style="text-align:center;"><b>copyright@2019 All rights reserved|This web is made by Anakin</b></div>
+
+</div>
+</body>
+</html>

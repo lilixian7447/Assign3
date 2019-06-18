@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="file:///E|/desktop/OneDrive - AIOS/WEB数据管理/Program/WANG_LEANEVENTO/css/sayitright.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ShowPicture</title>
+<style>
+	
+#all{
+		margin:0px auto;
+		width:500px;
+		height: 200px;
+
+	}
+	a{
+		margin: 0px auto;
+	}
+</style>
+</head>
+
+<body>
+	<div id='all'>
+	<b>1710 Pengyun,Wang</b>
+	{% if pic %}
+	{% for name in pic %}
+	<img width='200' height='200' src="{{ url_for('static', filename=name) }}" alt="" />
+	{% endfor %}
+	{% else %}
+	<a>no pic</a>
+	{% endif %}
+
+	</div>
+
+<!-- <div class="body">
+  <div><b>ab.jpg</b><img height='200' width='200' src="{{ url_for('static', filename='ab.jpg') }}"></div>
+<hr>
+ <div><b>dar.jpg</b><img height='200' width='200' src="{{ url_for('static', filename='dar.jpg') }}"></div>
+<hr>
+ <div><b>dave.jpg</b><img height='200' width='200' src="{{ url_for('static', filename='dave.jpg') }}"></div>
+<hr>
+ <div><b>jason.jpg</b><img height='200' width='200' src="{{ url_for('static', filename='jason.jpg') }}"></div>
+<hr>
+ <div><b>jees.jpg</b><img height='200' width='200' src="{{ url_for('static', filename='jees.jpg') }}"></div>
+<hr> -->
+<!--  <div><b>ab.jpg</b><img src="{{ url_for('static', filename='ab.jpg') }}"></div>
+<hr> -->
+
+
+
+<div id="footer" style="text-align:center;"><b>copyright@2019 All rights reserved|This web is made by Anakin</b></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ShowInfo</title>
+<style>
+	
+#all{
+		margin:0px auto;
+
+	}
+	a{
+		margin: 0px auto;
+	}
+</style>
+</head>
+
+<body>
+	
+
+<div class="body" id='all'>
+	<b>1710 Pengyun,Wang</b>
+<table cellspacing="10">
+	<tr>
+		<td>ct_l_day</td>
+		<td>ct_l_night</td>
+		<td>ct_s_day</td>
+		<td>ct_s_night</td>
+
+	</tr>
+
+
+<tr>
+	<td>
+		{{data[0][0]}}
+	</td>
+	<td>
+		{{data[0][1]}}
+	</td>
+		<td>
+		{{data[0][2]}}
+	</td>
+		<td>
+		{{data[0][3]}}
+	</td>
+		<td>
+
+</tr>
+
+</table>
+	
+{% if data[0][0]> data[0][1] %}
+<b>large earthquake happen in day more often</b>
+<br />
+{% else %}
+<b>large earthquake happen in night more often</b>
+<br />
+{% endif %}
+
+{% if data[0][2]> data[0][3] %}
+<b>small earthquake happen in day more often</b>
+<br />
+{% else %}
+<b>small earthquake happen in night more often</b>
+<br />
+{% endif %}
+
+
+
+<hr />
+<div id="footer" style="text-align:center;"><b>copyright@2019 All rights reserved|This web is made by Anakin</b></div>
+
+</div>
+</body>
+</html>
